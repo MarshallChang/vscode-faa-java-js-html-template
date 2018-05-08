@@ -4,21 +4,35 @@
     "description": "services for the faa'project",
     "version": "0.0.1",
     "publisher": "MarshallChang",
+    "repository": { 
+        "type": "git", 
+        "url":"https://github.com/MarshallChang/vscode-faa-java-js-html-template.git"
+    },
     "engines": {
         "vscode": "^1.23.0"
     },
     "categories": [
-        "Other"
+        "Snippets"
     ],
-    "activationEvents": [
-        "onCommand:extension.sayHello"
-    ],
+    "activationEvents": [],
     "main": "./extension",
     "contributes": {
-        "commands": [
+        "snippets": [
             {
-                "command": "extension.sayHello",
-                "title": "Hello World"
+                "language": "java",
+                "path": "./snippets.json"
+            },
+            {
+                "language": "javascript",
+                "path": "./snippets.json"
+            },
+            {
+                "language": "html",
+                "path": "./snippets.json"
+            },
+            {
+                "language": "properties",
+                "path": "./snippets.json"
             }
         ]
     },
@@ -32,5 +46,8 @@
         "eslint": "^4.11.0",
         "@types/node": "^7.0.43",
         "@types/mocha": "^2.2.42"
+    },
+    "dependencies": {
+        "npm": "^6.0.0"
     }
 }
